@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1720">
+  <meta name="description" content="เรากำลังสร้างพื้นที่ใหม่ แล้วพบกันเร็ว ๆ นี้">
+  <title>Under Construction — A New Space</title>
+  <style>
+    :root { color-scheme: dark; --bg: #0b1720; --text: #f0f5ed; --mint: #b7f5c4; --muted: #a2b3b8; --line: #ffffff24; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font-family: "Leelawadee UI", Tahoma, Arial, sans-serif; }
+    body::before { content: ""; position: fixed; inset: 0; pointer-events: none; background: radial-gradient(ellipse at 50% 35%, #245c4b26, transparent 58%); }
+    .page { position: relative; max-width: 1600px; min-height: 100vh; min-height: 100svh; margin: auto; padding: 30px 5vw 23px; display: flex; flex-direction: column; }
+    header { display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+    .brand { display: flex; align-items: center; gap: 10px; font: 700 13px/1.5 Arial, sans-serif; letter-spacing: 2px; }
+    .brand svg { color: var(--mint); width: 30px; height: 30px; }
+    .status { display: inline-flex; align-items: center; gap: 9px; padding: 9px 14px; border: 1px solid var(--line); border-radius: 30px; font-size: 11px; color: var(--muted); }
+    .status::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--mint); box-shadow: 0 0 12px #b7f5c455; }
+    main { flex: 1; text-align: center; padding: 36px 0 54px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+    .universe { position: relative; width: min(360px, 83vw); height: 212px; margin: 0 0 16px; }
+    .universe > svg { width: 100%; height: 100%; overflow: visible; }
+    .satellite { transform-origin: 180px 106px; animation: orbit 28s linear infinite; }
+    @keyframes orbit { to { transform: rotate(360deg); } }
+    .eyebrow { margin: 0 0 20px; color: var(--mint); font: 500 10px/1.5 monospace; letter-spacing: 4px; }
+    h1 { margin: 0; font: 500 clamp(54px, 7.8vw, 108px)/0.98 Arial, sans-serif; letter-spacing: -0.065em; }
+    h1 span { display: block; color: var(--mint); }
+    .copy { margin: 27px 0 0; max-width: 510px; }
+    .copy h2 { font-size: clamp(18px, 2.2vw, 23px); font-weight: 500; line-height: 1.6; margin: 0 0 10px; }
+    .copy p { color: var(--muted); font-size: 14px; line-height: 1.9; margin: 0; }
+    .soon { display: flex; align-items: center; gap: 12px; margin-top: 30px; font: 500 10px/1.5 monospace; letter-spacing: 2px; }
+    .soon::before, .soon::after { content: ""; width: 35px; height: 1px; background: #b7f5c466; }
+    footer { border-top: 1px solid var(--line); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; gap: 16px; color: var(--muted); font-size: 11px; line-height: 1.8; }
+    .footer-note { display: inline-flex; align-items: center; gap: 9px; font: 10px/1.8 monospace; letter-spacing: 1px; }
+    .footer-note svg { color: var(--mint); }
+    @media (min-width: 1500px) { main { padding-top: 55px; padding-bottom: 70px; } }
+    @media (max-width: 600px) {
+      .page { padding: 23px 6vw 20px; }
+      .brand { font-size: 11px; letter-spacing: 1px; gap: 7px; }
+      .brand svg { width: 25px; height: 25px; }
+      .status { padding: 7px 10px; font-size: 10px; }
+      main { padding: 40px 0 42px; }
+      .universe { height: 180px; margin-bottom: 21px; }
+      h1 { font-size: clamp(43px, 11vw, 66px); }
+      .eyebrow { font-size: 9px; letter-spacing: 2.5px; }
+      .copy { margin-top: 25px; }
+      .copy p { font-size: 13px; }
+      footer { flex-direction: column; gap: 7px; text-align: center; padding-top: 17px; }
+    }
+    @media (prefers-reduced-motion: reduce) { .satellite { animation: none; } }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <!-- เปลี่ยน OUR WEBSITE เป็นชื่อเว็บไซต์ของคุณ -->
+      <div class="brand">
+        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 2v28M2 16h28M6 6l20 20M6 26 26 6"/></svg>
+        OUR WEBSITE
+      </div>
+      <div class="status">อยู่ระหว่างการปรับปรุง</div>
+    </header>
+    <main>
+      <div class="universe" aria-hidden="true">
+        <svg viewBox="0 0 360 212" fill="none">
+          <defs>
+            <radialGradient id="planet" cx="0.3" cy="0.2" r="0.85">
+              <stop stop-color="#d8ffce"/>
+              <stop offset="0.42" stop-color="#9dd9b1"/>
+              <stop offset="0.78" stop-color="#447e70"/>
+              <stop offset="1" stop-color="#163b3b"/>
+            </radialGradient>
+            <radialGradient id="halo">
+              <stop stop-color="#b7f5c4" stop-opacity="0.13"/>
+              <stop offset="1" stop-color="#b7f5c4" stop-opacity="0"/>
+            </radialGradient>
+            <clipPath id="planet-clip"><circle cx="180" cy="106" r="63"/></clipPath>
+          </defs>
+          <ellipse cx="180" cy="106" rx="154" ry="104" fill="url(#halo)"/>
+          <circle cx="180" cy="106" r="95" stroke="#b7f5c4" stroke-opacity="0.09" stroke-dasharray="2 7"/>
+          <path d="M180 3v13M180 196v13M67 106H54M293 106h13" stroke="#b7f5c4" stroke-opacity="0.3"/>
+          <ellipse cx="180" cy="106" rx="146" ry="42" transform="rotate(-24 180 106)" stroke="#b7f5c4" stroke-opacity="0.35"/>
+          <circle cx="180" cy="106" r="63" fill="url(#planet)"/>
+          <g clip-path="url(#planet-clip)" stroke="#102d2b" stroke-opacity="0.18">
+            <ellipse cx="180" cy="106" rx="22" ry="63"/>
+            <ellipse cx="180" cy="106" rx="46" ry="63"/>
+            <ellipse cx="180" cy="106" rx="63" ry="22"/>
+            <ellipse cx="180" cy="106" rx="63" ry="46"/>
+            <path d="M117 106h126M180 43v126"/>
+          </g>
+          <path d="M46.62 165.38C56.05 186.57 123.41 177.2 197.08 144.37C270.74 111.58 322.82 67.81 313.38 46.62" stroke="#b7f5c4" stroke-width="1.5"/>
+          <g class="satellite"><circle cx="262" cy="58" r="5" fill="#d9fbd7"/><circle cx="262" cy="58" r="10" stroke="#b7f5c4" stroke-opacity="0.2"/></g>
+          <path d="M63 41v12M57 47h12M299 160v8M295 164h8" stroke="#b7f5c4" stroke-linecap="round"/>
+          <circle cx="284" cy="28" r="1.6" fill="#b7f5c4"/>
+          <circle cx="91" cy="183" r="1.5" fill="#b7f5c4" fill-opacity="0.5"/>
+        </svg>
+      </div>
+      <p class="eyebrow" lang="en">A NEW SPACE IS TAKING SHAPE</p>
+      <h1 lang="en">Under<span>construction.</span></h1>
+      <div class="copy">
+        <h2>พื้นที่ใหม่ ประสบการณ์ใหม่ เร็ว ๆ นี้</h2>
+        <p>เรากำลังออกแบบและปรับปรุงเว็บไซต์ให้ดียิ่งขึ้น<br>ขอบคุณที่เป็นส่วนหนึ่งของการเดินทาง แล้วกลับมาพบกันนะ</p>
+      </div>
+      <div class="soon" lang="en">SEE YOU SOON</div>
+    </main>
+    <footer>
+      <span>ทุกสิ่งดี ๆ เริ่มต้นจากความตั้งใจ</span>
+      <span class="footer-note" lang="en">
+        <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true"><path d="M8 1v14M1 8h14M3 3l10 10M3 13 13 3"/></svg>
+        A LITTLE PAUSE. A FRESH START.
+      </span>
+    </footer>
+  </div>
+</body>
+</html>
